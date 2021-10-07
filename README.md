@@ -1,7 +1,7 @@
 # RV
 
-Thomas DUONG
-Loïc FAISY
-Jules LELAY
-Davy MU
+Thomas DUONG<br>
+Loïc FAISY<br>
+Jules LELAY<br>
+Davy MU<br>
 Benoit SECHEHAYE
