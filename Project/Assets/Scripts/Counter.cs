@@ -10,7 +10,7 @@ public class Counter : MonoBehaviour
     public UnityEvent actionWhenCounterIncrement;
     public UnityEvent actionWhenCounterDecrement;
 
-    private int count = 0;
+    public int count = 0;
 
     static public Counter operator ++(Counter c)
     {

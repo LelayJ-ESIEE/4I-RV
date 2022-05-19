@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5397803052102071001}
   - component: {fileID: 6010139171183219567}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 7278911926043597385}
   - component: {fileID: 113724426380049412}
   - component: {fileID: 3405167415832774846}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Orb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ Transform:
   m_GameObject: {fileID: 8782231200885274592}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -14.75, y: 5, z: -18.5}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children:
   - {fileID: 5397803052102071001}
   m_Father: {fileID: 0}
