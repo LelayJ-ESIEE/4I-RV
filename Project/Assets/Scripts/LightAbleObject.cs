@@ -2,10 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WoodStick : MonoBehaviour
+public class LightAbleObject : MonoBehaviour
 {
+
     [SerializeField]
     GameObject Firezone;
+
+    [SerializeField]
+    GameObject LightFire;
+
+
 
     bool inFire;
     // Start is called before the first frame update
@@ -13,13 +19,13 @@ public class WoodStick : MonoBehaviour
     {
         inFire = true;
         extinguishFire();
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     private void lightFire()
     {
@@ -27,9 +33,10 @@ public class WoodStick : MonoBehaviour
         {
             inFire = true;
             Firezone.SetActive(true);
-            Debug.Log(inFire);
+            LightFire.SetActive(true);
+            Debug.Log("LightFire");
         }
-      
+
     }
     private void extinguishFire()
     {
@@ -37,7 +44,8 @@ public class WoodStick : MonoBehaviour
         {
             inFire = false;
             Firezone.SetActive(false);
-            Debug.Log(inFire);
+            LightFire.SetActive(false);
+            Debug.Log("extinguishFire");
         }
     }
     private void OnCollisionEnter(Collision col)
