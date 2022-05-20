@@ -1,0 +1,31 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Torch : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+    private void lightFire()
+    {
+        Debug.Log("Fire touch it");
+    }
+    private void OnTriggerEnter(Collider col)
+    {
+        if (col.tag == "Fire")
+        {
+            lightFire();
+        }
+
+
+    }
+}
