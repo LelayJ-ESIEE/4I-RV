@@ -739,6 +739,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6185274874677461408}
   - component: {fileID: 8302692085056773257}
+  - component: {fileID: 2410556580848842808}
   m_Layer: 0
   m_Name: Shape
   m_TagString: Untagged
@@ -808,6 +809,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &2410556580848842808
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3247287335899410813}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.9307399, y: 3.890902, z: 0.13647647}
+  m_Center: {x: 0.8468854, y: 2.0201705, z: 0.050165497}
 --- !u!1 &3833747643879035765
 GameObject:
   m_ObjectHideFlags: 0
@@ -2113,7 +2127,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7368683211198885365}
-  - component: {fileID: -1458129285748068706}
   m_Layer: 0
   m_Name: gate
   m_TagString: Untagged
@@ -2136,19 +2149,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &-1458129285748068706
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7856814299490334543}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.9646409, y: 3.8909023, z: 0.13647647}
-  m_Center: {x: 0.9988805, y: 2.0201705, z: 0.050165497}
 --- !u!1 &8200735649471916163
 GameObject:
   m_ObjectHideFlags: 0
