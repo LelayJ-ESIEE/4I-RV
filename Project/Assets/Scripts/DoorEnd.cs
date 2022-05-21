@@ -35,6 +35,10 @@ public class DoorEnd : MonoBehaviour
 
     public void open()
     {
-        this.gameObject.GetComponent<Renderer>().material.color = Color.green;
+        Animator doorAnim = this.gameObject.GetComponentInChildren<Animator>();
+        if(doorAnim)
+        {
+            doorAnim.Play("Open", 0, 0f);
+        }
     }
 }

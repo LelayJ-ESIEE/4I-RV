@@ -17,7 +17,7 @@ public class OrbZone : MonoBehaviour
             this.orbCounter++;
         }
 
-        Animator activationAnim = GetComponentInChildren<Animator>();
+        Animator activationAnim = this.gameObject.GetComponentInChildren<Animator>();
         if(activationAnim)
         {
             activationAnim.Play("Activated", 0, 0f);
