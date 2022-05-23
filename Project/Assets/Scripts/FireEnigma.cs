@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
 
 public class FireEnigma : MonoBehaviour
@@ -21,9 +22,24 @@ public class FireEnigma : MonoBehaviour
         
     }
 
-    public void ChangePassword()
+    public void ChangePassword(string id)
     {
-        Debug.Log("Changed");
+        StringBuilder sb = new StringBuilder();
+        sb.Append(playerPassword + id);
+        if (sb.Length != password.Length)
+        {
+            playerPassword = sb.ToString();
+            return;
+        }
+        if (sb.ToString() == playerPassword)
+        {
+            //Event make an orb appear
+            return;
+        }
+        playerPassword = "";
+        //Event close all light
+        return;
+
     }
 
     private void OnDestroy()

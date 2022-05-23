@@ -743,6 +743,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8409730ee28c0fc46a9af2dcdf361ecb, type: 3}
   m_PrefabInstance: {fileID: 733506655}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &90347438
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 90347440}
+  - component: {fileID: 90347439}
+  m_Layer: 0
+  m_Name: FireEnigma
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &90347439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90347438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c016c44101997429f04ed91f1f8fbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  password: 
+--- !u!4 &90347440
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90347438}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.35024, y: 2.2254198, z: -15.56098}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &130913125
 GameObject:
   m_ObjectHideFlags: 0
@@ -2746,6 +2790,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1469aff70f5519a49ad5ac3d157a5c3b, type: 3}
+--- !u!1 &434272957 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7849684464313119283, guid: 71fb4e8068609e946879cc7f79a2ae72, type: 3}
+  m_PrefabInstance: {fileID: 645044723}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &435983680
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6871,12 +6920,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1201039606}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5333e03457d80ad4f81ff3ae9accee9b, type: 3}
+  m_Script: {fileID: 11500000, guid: c025c9b4d063bcf4a8dc1233412933a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Firezone: {fileID: 227214020}
   LightFire: {fileID: 1188731834}
   inFire: 0
+  id: 1
 --- !u!1 &1202520640
 GameObject:
   m_ObjectHideFlags: 0
@@ -10110,6 +10160,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8818544750011074536, guid: 1469aff70f5519a49ad5ac3d157a5c3b, type: 3}
   m_PrefabInstance: {fileID: 274703520}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1893859840 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 943882080322062367, guid: 71fb4e8068609e946879cc7f79a2ae72, type: 3}
+  m_PrefabInstance: {fileID: 645044723}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1908995011 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8818544750011074536, guid: 1469aff70f5519a49ad5ac3d157a5c3b, type: 3}
@@ -10566,9 +10621,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90d3cf0ad629a1b4db983ef4c637a9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Firezone: {fileID: 227214020}
-  LightFire: {fileID: 1188731834}
-  inFire: 0
+  Firezone: {fileID: 434272957}
+  LightFire: {fileID: 1893859840}
+  inFire: 1
 --- !u!1 &1996387981
 GameObject:
   m_ObjectHideFlags: 0

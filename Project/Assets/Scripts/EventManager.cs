@@ -5,12 +5,14 @@ using UnityEngine;
 
 public class EventManager : MonoBehaviour
 {
-    public static event Action LightEnigmaFireEvent;
-    public static void LightEnigmaFire()
+    public static event Action<string> LightEnigmaFireEvent;
+    public static event Action WrongAnswerEvent;
+    public static event Action RightAnswerEvent;
+    public static void LightEnigmaFire(string id)
     {
         if (LightEnigmaFireEvent != null)
         {
-            LightEnigmaFireEvent();
+            LightEnigmaFireEvent(id);
         }
     }
     // Start is called before the first frame update
