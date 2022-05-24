@@ -15,7 +15,23 @@ public class EventManager : MonoBehaviour
             LightEnigmaFireEvent(id);
         }
     }
+
+    public static void WrongAnswer()
+    {
+        if (WrongAnswerEvent != null)
+        {
+            WrongAnswerEvent();
+        }
+    }
+
+    public static void RightAnswer()
+    {
+        if (RightAnswerEvent != null)
+        {
+            RightAnswerEvent();
+        }
+    }
     // Start is called before the first frame update
-    
+
 
 }

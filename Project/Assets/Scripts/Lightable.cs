@@ -5,11 +5,8 @@ using UnityEngine;
 public class Lightable : MonoBehaviour
 {
 
-    [SerializeField]
-    GameObject Firezone;
-
-    [SerializeField]
-    GameObject LightFire;
+    GameObject fireZone;
+    Light pointLight;
 
 
 
@@ -17,13 +14,14 @@ public class Lightable : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        pointLight = GetComponentInChildren<Light>();
+        fireZone = RecursiveFindChild(transform, "FX_Bonfire_A").gameObject;
         if (inFire)
         {
-            lightFire();
+            LightFire();
             return;
         }
-        extinguishFire();
-
+        ExtinguishFire();
     }
 
     // Update is called once per frame
@@ -31,48 +29,52 @@ public class Lightable : MonoBehaviour
     {
 
     }
-    private void lightFire()
+    protected void LightFire()
     {
         inFire = true;
-        Firezone.SetActive(true);
-        LightFire.SetActive(true);
-        Debug.Log("LightFire");
+        fireZone.SetActive(true);
+        pointLight.intensity = 1;
 
     }
-    private void extinguishFire()
+    protected void ExtinguishFire()
     {
         inFire = false;
-        Firezone.SetActive(false);
-        LightFire.SetActive(false);
-        Debug.Log("extinguishFire");
+        fireZone.SetActive(false);
+        pointLight.intensity = 0;
     }
-
-
-
-    /*private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log(other);
-        if (other.tag == "TorchWithoutFire")
-        {
-            Debug.Log("TorchWithoutFire");
-            lightFire();
-        }
-    }*/
 
 
     protected virtual void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision);
         GameObject collisionObject = collision.gameObject;
         Lightable l = collisionObject.GetComponent<Lightable>();
         if (l == null || l.inFire != true) return;
-        Debug.Log(collisionObject);
-        lightFire();
+        LightFire();
 
     }
 
     public bool IsInFire()
     {
         return inFire;
+    }
+
+    Transform RecursiveFindChild(Transform parent, string childName)
+    {
+        foreach (Transform child in parent)
+        {
+            if (child.name == childName)
+            {
+                return child;
+            }
+            else
+            {
+                Transform found = RecursiveFindChild(child, childName);
+                if (found != null)
+                {
+                    return found;
+                }
+            }
+        }
+        return null;
     }
 }

@@ -9,7 +9,11 @@ public class FireEnigma : MonoBehaviour
 
     [SerializeField] string password;
     private string playerPassword;
-    
+
+    [SerializeField] GameObject Orb; 
+
+
+
     void Start()
     {
         EventManager.LightEnigmaFireEvent += ChangePassword;
@@ -31,15 +35,20 @@ public class FireEnigma : MonoBehaviour
             playerPassword = sb.ToString();
             return;
         }
-        if (sb.ToString() == playerPassword)
+        if (sb.ToString() == password)
         {
-            //Event make an orb appear
+            CreateOrb();
             return;
         }
         playerPassword = "";
-        //Event close all light
+        EventManager.WrongAnswer();
         return;
 
+    }
+
+    private void CreateOrb()
+    {
+        Instantiate(Orb, this.transform.position, Quaternion.identity);
     }
 
     private void OnDestroy()
