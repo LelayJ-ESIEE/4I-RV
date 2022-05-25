@@ -15,12 +15,14 @@ public class OrbZone : MonoBehaviour
             isValidated = true;
             GameObject.Destroy(other.gameObject);
             this.orbCounter++;
+
+            Animator activationAnim = this.gameObject.GetComponentInChildren<Animator>();
+            if(activationAnim)
+            {
+                activationAnim.Play("Activated", 0, 0f);
+            }
+            GetComponent<Collider>().enabled = false;
         }
 
-        Animator activationAnim = this.gameObject.GetComponentInChildren<Animator>();
-        if(activationAnim)
-        {
-            activationAnim.Play("Activated", 0, 0f);
-        }
     }
 }
