@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3659941966404163150}
+  - component: {fileID: 7741979298664501665}
+  - component: {fileID: 2789923116867475064}
   m_Layer: 0
   m_Name: Feu
   m_TagString: TorchWithoutFire
@@ -24,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3659941966404163151}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.544, y: 0.92, z: 13.982}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 7.1212444, y: -0.0017331839, z: -16.90681}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 3664780119025499296}
   - {fileID: 3664411641953776565}
@@ -33,6 +35,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7741979298664501665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3659941966404163151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5333e03457d80ad4f81ff3ae9accee9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inFire: 1
+--- !u!135 &2789923116867475064
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3659941966404163151}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.56801915
+  m_Center: {x: -0.041694045, y: 0.7543807, z: 0.07099795}
 --- !u!1001 &3659941965508390836
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -220,6 +248,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4542265251774996, guid: 7cbade367cec8004699355fd84329720, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64386662241062088, guid: 7cbade367cec8004699355fd84329720, type: 3}
+      propertyPath: m_Convex
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -10,10 +10,11 @@ public class FireWoodEnigma : Lightable
     {
         EventManager.WrongAnswerEvent += base.ExtinguishFire;
     }
-    protected override void OnCollisionEnter(Collision collision)
+    protected override void OnTriggerEnter(Collider collider)
     {
-        if (base.IsInFire()) return;
-        base.OnCollisionEnter(collision);
+        Lightable l = collider.gameObject.GetComponent<Lightable>();
+        if (base.IsInFire() || l == null || !l.IsInFire()) return;
+        base.OnTriggerEnter(collider);
         EventManager.LightEnigmaFire(id.ToString());
 
     }

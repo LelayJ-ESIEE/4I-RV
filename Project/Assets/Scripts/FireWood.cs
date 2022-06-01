@@ -5,9 +5,9 @@ using UnityEngine;
 public class FireWood : Lightable
 {
     // Start is called before the first frame update
-    protected override void OnCollisionEnter(Collision collision)
+    protected override void OnTriggerEnter(Collider collider)
     {
-        base.OnCollisionEnter(collision);
+        base.OnTriggerEnter(collider);
 
     }
 }

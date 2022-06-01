@@ -44,9 +44,9 @@ public class Lightable : MonoBehaviour
     }
 
 
-    protected virtual void OnCollisionEnter(Collision collision)
+    protected virtual void OnTriggerEnter(Collider collider)
     {
-        GameObject collisionObject = collision.gameObject;
+        GameObject collisionObject = collider.gameObject;
         Lightable l = collisionObject.GetComponent<Lightable>();
         if (l == null || l.inFire != true) return;
         LightFire();

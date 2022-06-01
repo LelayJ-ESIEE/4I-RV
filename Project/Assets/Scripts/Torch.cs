@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class Torch : Lightable
 {
-    protected override void OnCollisionEnter(Collision collision)
+    protected override void OnTriggerEnter(Collider collider)
     {
-        Debug.Log("Torche");
-        Debug.Log(base.IsInFire());
-        base.OnCollisionEnter(collision);
+        base.OnTriggerEnter(collider);
     }
 }

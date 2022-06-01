@@ -30,6 +30,7 @@ public class FireEnigma : MonoBehaviour
     {
         StringBuilder sb = new StringBuilder();
         sb.Append(playerPassword + id);
+        Debug.Log(sb.ToString());
         if (sb.Length != password.Length)
         {
             playerPassword = sb.ToString();
