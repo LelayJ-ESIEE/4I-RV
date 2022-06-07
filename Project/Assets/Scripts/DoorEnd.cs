@@ -18,7 +18,7 @@ public class DoorEnd : MonoBehaviour
             if(i < counter.count)
             {
                 indicator.GetComponent<MeshRenderer>().material = activeMaterial;
-                l.intensity = 0.5f;
+                l.intensity = 1f;
             } else
             {
                 indicator.GetComponent<MeshRenderer>().material = inactiveMaterial;
